@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Beacon of Hope</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/donate.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../images/BeaconLogo.png" alt="Beacon of Hope Logo" class="logo-img" />
+    </a>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="vision.html" class="nav-link">Vision &amp; Mission</a></li>
+      <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="donate.html" class="nav-link nav-donate active">Donate</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero page-hero--gold" style="background-image:url('../images/education.jpeg');">
+    <div class="container">
+      <span class="page-hero-tag">Make a Difference</span>
+      <h1>Donate to <em>Beacon of Hope</em></h1>
+      <p>Every rand you give goes directly to supporting orphaned and vulnerable children through home visits, caregiver resources, and daily care.</p>
+    </div>
+  </section>
+
+  <section class="section donate-section">
+    <div class="container">
+      <div class="donate-layout">
+
+        <div class="donate-impact">
+          <h2>Your Impact</h2>
+          <p>Here's what your donation makes possible:</p>
+          <div class="impact-list">
+            <div class="impact-item">
+              <span class="impact-amount">R50</span>
+              <p>Covers transport costs for a caregiver to conduct a home visit</p>
+            </div>
+            <div class="impact-item">
+              <span class="impact-amount">R150</span>
+              <p>Provides stationery and files for documenting 5 beneficiary records</p>
+            </div>
+            <div class="impact-item">
+              <span class="impact-amount">R500</span>
+              <p>Funds a full month of food support for one vulnerable child</p>
+            </div>
+            <div class="impact-item">
+              <span class="impact-amount">R1 000+</span>
+              <p>Sponsors a caregiver uniform and monthly programme support</p>
+            </div>
+          </div>
+          <p class="donate-note">Beacon of Hope is a registered NPO (307-989). All donations are received in good faith to support our beneficiary programmes.</p>
+        </div>
+
+        <div class="donate-form-wrap">
+          <h2>Give Now</h2>
+          <div class="amount-selector">
+            <button class="amount-btn" data-amount="50">R50</button>
+            <button class="amount-btn active" data-amount="150">R150</button>
+            <button class="amount-btn" data-amount="500">R500</button>
+            <button class="amount-btn" data-amount="1000">R1 000</button>
+          </div>
+
+          <div class="form-group" style="margin-top:1rem;">
+            <label for="customAmount">Or enter your own amount (ZAR)</label>
+            <input type="number" id="customAmount" min="10" placeholder="e.g. 250" />
+          </div>
+
+          <form class="donate-form" id="donateForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dname">Full Name</label>
+                <input type="text" id="dname" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="dphone">Phone Number</label>
+                <input type="tel" id="dphone" placeholder="e.g. 082 000 0000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="demail">Email Address</label>
+              <input type="email" id="demail" placeholder="For receipt / confirmation" required />
+            </div>
+            <div class="form-group">
+              <label for="dmessage">Message (optional)</label>
+              <textarea id="dmessage" rows="3" placeholder="Any message or dedication…"></textarea>
+            </div>
+
+            <div class="bank-details">
+              <h4>Bank Transfer Details</h4>
+              <div class="bank-row"><span>Bank</span><strong>— To be added by organisation —</strong></div>
+              <div class="bank-row"><span>Account Name</span><strong>Beacon of Hope</strong></div>
+              <div class="bank-row"><span>Reference</span><strong>Your Name + DONATE</strong></div>
+              <p class="bank-note">Please email proof of payment to <a href="mailto:beaconofhope118@gmail.com">beaconofhope118@gmail.com</a> with your name and the amount donated.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;">
+              Confirm Pledge
+            </button>
+            <div class="form-success" id="donateSuccess">
+              ❤️ Thank you for your generosity! We'll confirm your donation shortly.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="../images/BeaconLogo.png" alt="Beacon of Hope" class="footer-logo-img" />
+        <div>
+          <span class="footer-name">Beacon of Hope</span>
+          <span class="footer-npo">NPO 307-989</span>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="vision.html">Vision &amp; Mission</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html">Donate</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Beacon of Hope. Registered NPO. All rights reserved. Designed by Aluwani Rambau - <a href="https://www.github.com/aluwani99" target="_blank">aluwani99</a></p>
+      
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/donate.js"></script>
+</body>
+</html>

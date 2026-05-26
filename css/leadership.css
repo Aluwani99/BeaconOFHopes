@@ -1,0 +1,183 @@
+/* ============================================================
+   BEACON OF HOPE — Leadership Page Styles
+   ============================================================ */
+
+.leaders-section { background: var(--off-white); }
+
+/* Featured Leader */
+.leader-featured {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.leader-featured-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leader-avatar {
+  width: 96px;
+  height: 96px;
+  background: var(--primary-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid var(--border);
+}
+
+.leader-avatar--large {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, var(--primary-pale) 0%, #b0dde8 100%);
+  border: 4px solid var(--primary-light);
+}
+
+.leader-avatar--empty {
+  background: rgba(0,0,0,0.04);
+  border: 2px dashed var(--border);
+  font-size: 2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.leader-badge-featured {
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+}
+
+.leader-featured-info .section-tag { margin-bottom: 0.75rem; }
+
+.leader-featured-info h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.leader-featured-info p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.leader-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.leader-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--primary-pale);
+  padding: 0.45rem 1rem;
+  border-radius: 50px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.leader-contact-link:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Leaders Grid */
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.leader-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.leader-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.leader-card--add {
+  border-style: dashed;
+  background: rgba(0,0,0,0.01);
+  opacity: 0.7;
+}
+
+.leader-card .leader-avatar {
+  margin: 0 auto 1.25rem;
+}
+
+.leader-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.35rem;
+}
+
+.leader-role {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-mid);
+  background: var(--primary-pale);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+}
+
+.leader-info p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Photo placeholder instruction */
+.leader-card--add .leader-avatar--empty span {
+  font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leader-featured {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .leader-contact { justify-content: center; }
+}

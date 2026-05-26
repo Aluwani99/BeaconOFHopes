@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery &amp; Achievements | Beacon of Hope</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/gallery.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../images/BeaconLogo.png" alt="Beacon of Hope Logo" class="logo-img" />
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="vision.html" class="nav-link">Vision &amp; Mission</a></li>
+      <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="donate.html" class="nav-link nav-donate">Donate</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background-image:url('../images/education.jpg');">
+    <div class="container">
+      <span class="page-hero-tag">Our Work in Pictures</span>
+      <h1>Gallery &amp; <em>Achievements</em></h1>
+      <p>A window into the lives we touch, the work we do, and the milestones we celebrate together as a community.</p>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS STRIP -->
+  <section class="achievements-strip">
+    <div class="container">
+      <div class="achievements-grid">
+
+        <div class="achievement-card">
+          <div class="achievement-icon">🏆</div>
+          <div class="achievement-body">
+            <h3>NPO Registration</h3>
+            <span class="achievement-year">2019</span>
+            <p>Officially registered as a non-profit organisation under NPO 307-989, formalising our commitment to vulnerable children.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="achievement-icon">👧</div>
+          <div class="achievement-body">
+            <h3>120+ Beneficiaries Reached</h3>
+            <span class="achievement-year">Ongoing</span>
+            <p>Over 120 orphaned and vulnerable children are currently supported through our home visit and care programmes.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="achievement-icon">🏡</div>
+          <div class="achievement-body">
+            <h3>300+ Home Visits</h3>
+            <span class="achievement-year">Cumulative</span>
+            <p>Our dedicated caregivers have completed over 300 home visits, documenting and supporting each beneficiary personally.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="achievement-icon">📋</div>
+          <div class="achievement-body">
+            <h3>Full Case Documentation</h3>
+            <span class="achievement-year">2024</span>
+            <p>Every beneficiary now has a complete file with documented history, background, and regular process notes.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="achievement-icon">🤝</div>
+          <div class="achievement-body">
+            <h3>15 Active Volunteers</h3>
+            <span class="achievement-year">2025</span>
+            <p>A growing team of 15 committed caregivers and coordinators giving their time to serve children every week.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="achievement-icon">❤️</div>
+          <div class="achievement-body">
+            <h3>Community Fundraising</h3>
+            <span class="achievement-year">2026</span>
+            <p>Successful community contributions and fundraising drives supporting families in need across our service area.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO BANNER -->
+  <section class="photo-banner" style="background-image:url('../images/education-program.jpg');">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our People &amp; Moments</span>
+        <h2>See Our Work in Action</h2>
+        <p>Real moments from our caregivers, volunteers, and the children and families we serve every day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="section gallery-section">
+    <div class="container">
+
+      <!-- Filter tabs -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="team">Our Team</button>
+        <button class="filter-btn" data-filter="children">Children</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="community">Community</button>
+      </div>
+
+      <!-- Gallery grid — uses the 2 real photos + placeholder cards for future uploads -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Real photos -->
+        <div class="gallery-item" data-category="children" data-title="Happy Children" data-desc="Smiling children supported through our OVC programme">
+          <img src="../images/education.jpeg" alt="Children smiling" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Happy Children</span>
+            <span class="gallery-item-cat">Children</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item" data-category="team" data-title="Caregiver Session" data-desc="A caregiver reading with children during a home programme session">
+          <img src="../images/SchoolProgram.jpg" alt="Caregiver reading with children" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Caregiver Reading Session</span>
+            <span class="gallery-item-cat">Our Team</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
+          <img src="../images/Community1.jpg" alt="Caregiver reading with children" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
+          <img src="../images/Community3.jpg" alt="Caregiver reading with children" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
+         <img src="../images/Community2.jpg" alt="Caregiver reading with children" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
+         <img src="../images/Community4.jpg" alt="Caregiver reading with children" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
+         <img src="../images/Community5.jpg" alt="Caregiver reading with children" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
+         <img src="../images/Community6.jpg" alt="Caregiver reading with children" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
+         <img src="../images/Community7.jpg" alt="Caregiver reading with children" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder gallery-item--wide" data-category="community">
+          <div class="placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <p>Add your photo here</p>
+            <span>Community event or fundraiser</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder" data-category="children">
+          <div class="placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <p>Add your photo here</p>
+            <span>Beneficiary programme activity</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder" data-category="events">
+          <div class="placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <p>Add your photo here</p>
+            <span>Annual event / ceremony</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder" data-category="community">
+          <div class="placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <p>Add your photo here</p>
+            <span>Community outreach</span>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg" />
+      <div class="lightbox-caption">
+        <strong id="lightboxTitle"></strong>
+        <span id="lightboxDesc"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Be Part of Our Story</h2>
+        <p>Every donation, volunteer hour, and act of love adds a new chapter to the story of Beacon of Hope.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="donate.html" class="btn btn-light">Donate Now</a>
+          <a href="contact.html" class="btn btn-outline">Volunteer With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="../images/BeaconLogo.png" alt="Beacon of Hope" class="footer-logo-img" />
+        <div>
+          <span class="footer-name">Beacon of Hope</span>
+          <span class="footer-npo">NPO 307-989</span>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="vision.html">Vision &amp; Mission</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html">Donate</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Beacon of Hope. Registered NPO. All rights reserved. Designed by Aluwani Rambau - <a href="https://www.github.com/aluwani99" target="_blank">aluwani99</a></p>
+      
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beacon of Hope | We Care, We Love</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/BeaconLogo.png" alt="Beacon of Hope Logo" class="logo-img" />
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="pages/about.html" class="nav-link">About Us</a></li>
+      <li><a href="pages/vision.html" class="nav-link">Vision &amp; Mission</a></li>
+      <li><a href="pages/leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="pages/gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      <li><a href="pages/donate.html" class="nav-link nav-donate">Donate</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <!-- Background layers: photo 1, photo 2, overlay -->
+    <div class="hero-bg-img active" id="heroBg0" style="background-image:url('images/education.jpg');"></div>
+    <div class="hero-bg-img" id="heroBg1" style="background-image:url('images/SchoolProgram.jpg');"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Background chooser -->
+    <div class="hero-bg-chooser" id="heroBgChooser">
+      <span class="chooser-label">Background</span>
+      <button class="chooser-btn active" data-bg="0" aria-label="Children smiling">
+        <img src="images/education.jpg" alt="Children" />
+      </button>
+      <button class="chooser-btn" data-bg="1" aria-label="Caregiver reading">
+        <img src="images/SchoolProgram.jpg" alt="Caregiver reading" />
+      </button>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-badge">NPO 307-989</span>
+      <h1 class="hero-title">
+        Lighting the Way<br/>
+        <em>for Every Child</em>
+      </h1>
+      <p class="hero-sub">Beacon of Hope is a registered non-profit organisation committed to caring for orphaned and vulnerable children — providing love, support, and a brighter future.</p>
+      <div class="hero-actions">
+        <a href="pages/donate.html" class="btn btn-primary">Donate Now</a>
+        <a href="pages/about.html" class="btn btn-outline">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- IMPACT STATS -->
+  <!-- IMPACT STATS -->
+  <section class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num" data-target="120">0</span>
+      <span class="stat-label">Beneficiaries Supported</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="15">0</span>
+      <span class="stat-label">Volunteer Caregivers</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="5">0</span>
+      <span class="stat-label">Years of Service</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="300">0</span>
+      <span class="stat-label">Home Visits Completed</span>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="section services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Do</span>
+        <h2>Serving the Most Vulnerable</h2>
+        <p>We walk alongside orphaned and vulnerable children, their families, and communities to build a foundation of love and dignity.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4C24 4 8 12 8 26C8 34.8 15.2 42 24 42C32.8 42 40 34.8 40 26C40 12 24 4Z" fill="currentColor" opacity="0.2"/>
+              <path d="M24 4C24 4 8 12 8 26C8 34.8 15.2 42 24 42C32.8 42 40 34.8 40 26C40 12 24 4Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M24 28L20 22H28L24 28Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Home Visits</h3>
+          <p>Caregivers visit beneficiaries at home to assess needs, collect documents, and record full background histories for each child in our care.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M16 20H32M16 28H26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="34" cy="34" r="7" fill="currentColor" opacity="0.2"/>
+              <path d="M31 34H37M34 31V37" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>File &amp; Record Management</h3>
+          <p>Every beneficiary's information is carefully filed and maintained by our coordinators to ensure accurate, accessible records for each case.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="8" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="30" cy="18" r="8" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M8 38C8 32 12.5 28 18 28H30C35.5 28 40 32 40 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Beneficiary Recruitment</h3>
+          <p>We actively identify and recruit orphaned and vulnerable children into our programme, ensuring no child falls through the cracks of the system.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6L28 18H40L30 26L34 38L24 30L14 38L18 26L8 18H20L24 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Community Support</h3>
+          <p>Beyond individual children, we uplift the broader community through caregiver training, mutual support, and collaborative fundraising.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Every Rand Makes a Difference</h2>
+        <p>Your contribution directly supports home visits, file management, and the daily care of vulnerable children in our community.</p>
+        <a href="pages/donate.html" class="btn btn-light">Support a Child Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT QUICK -->
+  <section class="section contact-quick">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2>We'd Love to Hear From You</h2>
+      </div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h4>Call Us</h4>
+          <p>072 753 5821</p>
+          <p>076 335 1791 (Office)</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h4>Email Us</h4>
+          <p>beaconofhope118@gmail.com</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🏛️</div>
+          <h4>Registration</h4>
+          <p>NPO 307-989</p>
+          <p>Registered Non-Profit Organisation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="../images/BeaconLogo.png" alt="Beacon of Hope" class="footer-logo-img" />
+        <div>
+          <span class="footer-name">Beacon of Hope</span>
+          <span class="footer-npo">NPO 307-989</span>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="vision.html">Vision &amp; Mission</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html">Donate</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Beacon of Hope. Registered NPO. All rights reserved. Designed by Aluwani Rambau - <a href="https://www.github.com/aluwani99" target="_blank">aluwani99</a></p>
+      
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
