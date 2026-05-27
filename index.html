@@ -12,7 +12,7 @@
   <!-- NAV -->
   <nav class="navbar" id="navbar">
     <a href="index.html" class="nav-logo">
-      <img src="images/BeaconLogo.png" alt="Beacon of Hope Logo" class="logo-img" />
+      <div class="logo-img-wrap"><img src="images/BeaconLogo.png" alt="Beacon of Hope Logo" class="logo-img" /></div>
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -32,20 +32,22 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <!-- Background layers: photo 1, photo 2, overlay -->
-    <div class="hero-bg-img active" id="heroBg0" style="background-image:url('images/education.jpg');"></div>
-    <div class="hero-bg-img" id="heroBg1" style="background-image:url('images/SchoolProgram.jpg');"></div>
+    <div class="hero-bg-img active" style="background-image:url('images/education.jpg');"></div>
+    <div class="hero-bg-img" style="background-image:url('images/Community1.jpg');"></div>
+    <div class="hero-bg-img" style="background-image:url('images/SchoolProgram.jpg');"></div>
+    <div class="hero-bg-img" style="background-image:url('images/Community3.jpg');"></div>
+    <div class="hero-bg-img" style="background-image:url('images/Community5.jpg');"></div>
+    <div class="hero-bg-img" style="background-image:url('images/Community7.jpg');"></div>
+    <div class="hero-bg-img" style="background-image:url('images/education-program.jpg');"></div>
     <div class="hero-overlay"></div>
-
-    <!-- Background chooser -->
-    <div class="hero-bg-chooser" id="heroBgChooser">
-      <span class="chooser-label">Background</span>
-      <button class="chooser-btn active" data-bg="0" aria-label="Children smiling">
-        <img src="images/education.jpg" alt="Children" />
-      </button>
-      <button class="chooser-btn" data-bg="1" aria-label="Caregiver reading">
-        <img src="images/SchoolProgram.jpg" alt="Caregiver reading" />
-      </button>
+    <div class="hero-dots" id="heroDots">
+      <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+      <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+      <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
+      <button class="hero-dot" data-index="5" aria-label="Slide 6"></button>
+      <button class="hero-dot" data-index="6" aria-label="Slide 7"></button>
     </div>
 
     <div class="hero-content">
@@ -189,7 +191,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <img src="../images/BeaconLogo.png" alt="Beacon of Hope" class="footer-logo-img" />
+        <div class="footer-logo-wrap"><img src="../images/BeaconLogo.png" alt="Beacon of Hope" class="footer-logo-img" /></div>
         <div>
           <span class="footer-name">Beacon of Hope</span>
           <span class="footer-npo">NPO 307-989</span>

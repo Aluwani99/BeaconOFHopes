@@ -2,92 +2,81 @@
 // BEACON OF HOPE — Global JS
 // ============================================================
 
-// Navbar scroll effect
+// ---- NAVBAR SCROLL ----
 (function () {
   const navbar = document.getElementById('navbar');
   if (!navbar) return;
-
-  const onScroll = () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  };
-
+  const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 40);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
 
-// Mobile nav toggle
+// ---- MOBILE NAV DRAWER ----
 (function () {
-  const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
+  const toggle   = document.getElementById('navToggle');
+  const links    = document.getElementById('navLinks');
+  const navbar   = document.getElementById('navbar');
   if (!toggle || !links) return;
 
+  // Create backdrop
+  let backdrop = document.querySelector('.nav-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  function openNav() {
+    links.classList.add('open');
+    toggle.classList.add('open');
+    backdrop.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeNav() {
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    backdrop.classList.remove('show');
+    document.body.style.overflow = '';
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
   toggle.addEventListener('click', () => {
-    const isOpen = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    links.classList.contains('open') ? closeNav() : openNav();
   });
 
-  // Close on link click
-  links.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      links.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
+  // Close on backdrop click
+  backdrop.addEventListener('click', closeNav);
 
-  // Close on outside click
-  document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target)) {
-      links.classList.remove('open');
-      document.body.style.overflow = '';
-    }
+  // Close on nav link click
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+
+  // Close if window resizes to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeNav();
   });
 })();
 
-// Active nav link
+// ---- ACTIVE NAV LINK ----
 (function () {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const current = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href').split('/').pop();
-    if (href === currentPath) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+    const href = (link.getAttribute('href') || '').split('/').pop();
+    link.classList.toggle('active', href === current);
   });
 })();
 
-// Scroll-reveal animation
+// ---- SCROLL REVEAL ----
 (function () {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.service-card, .contact-card, .leader-card, .section-header').forEach(el => {
-    el.classList.add('reveal');
-    observer.observe(el);
-  });
+  if (!('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll(
+    '.service-card, .contact-card, .leader-card, .achievement-card, .highlight-card, .value-item, .vm-card, .section-header'
+  ).forEach(el => { el.classList.add('reveal'); observer.observe(el); });
 })();
-
-// Inject reveal CSS
-const revealStyle = document.createElement('style');
-revealStyle.textContent = `
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.revealed { opacity: 1; transform: none; }
-  .service-card.reveal:nth-child(2) { transition-delay: 0.1s; }
-  .service-card.reveal:nth-child(3) { transition-delay: 0.2s; }
-  .service-card.reveal:nth-child(4) { transition-delay: 0.3s; }
-  .leader-card.reveal:nth-child(2) { transition-delay: 0.1s; }
-  .leader-card.reveal:nth-child(3) { transition-delay: 0.2s; }
-  .leader-card.reveal:nth-child(4) { transition-delay: 0.3s; }
-`;
-document.head.appendChild(revealStyle);

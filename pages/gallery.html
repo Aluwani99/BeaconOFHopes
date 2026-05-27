@@ -11,7 +11,7 @@
 
   <nav class="navbar scrolled" id="navbar">
     <a href="../index.html" class="nav-logo">
-      <img src="../images/BeaconLogo.png" alt="Beacon of Hope Logo" class="logo-img" />
+      <div class="logo-img-wrap"><img src="../images/BeaconLogo.png" alt="Beacon of Hope Logo" class="logo-img" /></div>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -36,9 +36,14 @@
     </div>
   </section>
 
-  <!-- ACHIEVEMENTS STRIP -->
+  <!-- ACHIEVEMENTS -->
   <section class="achievements-strip">
     <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Milestones</span>
+        <h2>What We Have Achieved</h2>
+        <p>Every number represents a life touched, a child supported, and a community strengthened by Beacon of Hope.</p>
+      </div>
       <div class="achievements-grid">
 
         <div class="achievement-card">
@@ -110,7 +115,7 @@
     </div>
   </section>
 
-  <!-- GALLERY GRID -->
+  <!-- GALLERY -->
   <section class="section gallery-section">
     <div class="container">
 
@@ -123,116 +128,177 @@
         <button class="filter-btn" data-filter="community">Community</button>
       </div>
 
-      <!-- Gallery grid — uses the 2 real photos + placeholder cards for future uploads -->
+      <!-- ONE clean gallery grid — no duplicates -->
       <div class="gallery-grid" id="galleryGrid">
 
-        <!-- Real photos -->
-        <div class="gallery-item" data-category="children" data-title="Happy Children" data-desc="Smiling children supported through our OVC programme">
-          <img src="../images/education.jpeg" alt="Children smiling" />
+        <div class="gallery-item gallery-item--wide" data-category="children" data-title="Happy Children" data-desc="Smiling children supported through our OVC programme">
+          <img src="../images/education.jpg" alt="Children smiling" loading="lazy" />
           <div class="gallery-overlay">
             <span class="gallery-item-title">Happy Children</span>
             <span class="gallery-item-cat">Children</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item" data-category="team" data-title="Caregiver Session" data-desc="A caregiver reading with children during a home programme session">
-          <img src="../images/SchoolProgram.jpg" alt="Caregiver reading with children" />
+        <div class="gallery-item" data-category="team" data-title="Caregiver Reading Session" data-desc="A caregiver reading with children during a home programme session">
+          <img src="../images/education-program.jpg" alt="Caregiver reading with children" loading="lazy" />
           <div class="gallery-overlay">
             <span class="gallery-item-title">Caregiver Reading Session</span>
             <span class="gallery-item-cat">Our Team</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
-          <img src="../images/Community1.jpg" alt="Caregiver reading with children" />
+        <div class="gallery-item" data-category="community" data-title="Community Gathering" data-desc="Community members coming together for Beacon of Hope activities">
+          <img src="../images/Community1.jpg" alt="Community gathering" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-title">Community Gathering</span>
             <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
-          <img src="../images/Community3.jpg" alt="Caregiver reading with children" />
+        <div class="gallery-item gallery-item--wide" data-category="events" data-title="Community Event" data-desc="Beacon of Hope community event bringing families together">
+          <img src="../images/Community2.jpg" alt="Community event" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-title">Community Event</span>
+            <span class="gallery-item-cat">Events</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Community3.jpg" alt="Outreach programme" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Outreach Programme</span>
             <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
-         <img src="../images/Community2.jpg" alt="Caregiver reading with children" />
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (1).jpg" alt="Outreach programme" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-title">Outreach Programme</span>
             <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
-         <img src="../images/Community4.jpg" alt="Caregiver reading with children" />
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (2).jpg" alt="Outreach programme" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-title">Outreach Programme</span>
             <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
-         <img src="../images/Community5.jpg" alt="Caregiver reading with children" />
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (3).jpg" alt="Outreach programme" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-title">Outreach Programme</span>
             <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
-         <img src="../images/Community6.jpg" alt="Caregiver reading with children" />
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (4).jpg" alt="Outreach programme" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-title">Outreach Programme</span>
             <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item" data-category="community" data-title="Caregiver Session" data-desc="Community Work">
-         <img src="../images/Community7.jpg" alt="Caregiver reading with children" />
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (5).jpg" alt="Outreach programme" loading="lazy" />
           <div class="gallery-overlay">
-            <span class="gallery-item-title">Community Work</span>
+            <span class="gallery-item-title">Outreach Programme</span>
             <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-placeholder gallery-item--wide" data-category="community">
-          <div class="placeholder-inner">
-            <div class="placeholder-icon">📷</div>
-            <p>Add your photo here</p>
-            <span>Community event or fundraiser</span>
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (6).jpg" alt="Outreach programme" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Outreach Programme</span>
+            <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-placeholder" data-category="children">
-          <div class="placeholder-inner">
-            <div class="placeholder-icon">📷</div>
-            <p>Add your photo here</p>
-            <span>Beneficiary programme activity</span>
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (7).jpg" alt="Outreach programme" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Outreach Programme</span>
+            <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-placeholder" data-category="events">
-          <div class="placeholder-inner">
-            <div class="placeholder-icon">📷</div>
-            <p>Add your photo here</p>
-            <span>Annual event / ceremony</span>
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (8).jpg" alt="Outreach programme" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Outreach Programme</span>
+            <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
-        <div class="gallery-item gallery-placeholder" data-category="community">
-          <div class="placeholder-inner">
-            <div class="placeholder-icon">📷</div>
-            <p>Add your photo here</p>
-            <span>Community outreach</span>
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image (9).jpg" alt="Outreach programme" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Outreach Programme</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+
+                <div class="gallery-item" data-category="community" data-title="Outreach Programme" data-desc="Volunteers during a community outreach and home visit day">
+          <img src="../images/Image.jpg" alt="Outreach programme" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Outreach Programme</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="children" data-title="Children's Programme" data-desc="Children participating in our education support programme">
+          <img src="../images/Community4.jpg" alt="Children programme" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Children's Programme</span>
+            <span class="gallery-item-cat">Children</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item--wide" data-category="events" data-title="School Programme" data-desc="Our school support and education programme in action">
+          <img src="../images/SchoolProgram.jpg" alt="School programme" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">School Programme</span>
+            <span class="gallery-item-cat">Events</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="community" data-title="Community Support" data-desc="Beacon of Hope volunteers providing community support">
+          <img src="../images/Community5.jpg" alt="Community support" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Community Support</span>
+            <span class="gallery-item-cat">Community</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="team" data-title="Our Volunteers" data-desc="Dedicated volunteers giving their time to serve children and families">
+          <img src="../images/Community6.jpg" alt="Our volunteers" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Our Volunteers</span>
+            <span class="gallery-item-cat">Our Team</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item--wide" data-category="community" data-title="Together We Serve" data-desc="The Beacon of Hope family working together for a brighter future">
+          <img src="../images/Community7.jpg" alt="Together we serve" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-item-title">Together We Serve</span>
+            <span class="gallery-item-cat">Community</span>
           </div>
         </div>
 
       </div>
 
+      <!-- Add photos note -->
+      <div class="gallery-note">
+        <span class="gallery-note-icon">ℹ️</span>
+        <p>To add more photos: save your images in the <code>images/</code> folder, then copy any <code>.gallery-item</code> block above and update the <code>src</code> path and captions.</p>
+      </div>
 
     </div>
   </section>
@@ -268,7 +334,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <img src="../images/BeaconLogo.png" alt="Beacon of Hope" class="footer-logo-img" />
+        <div class="footer-logo-wrap"><img src="../images/BeaconLogo.png" alt="Beacon of Hope" class="footer-logo-img" /></div>
         <div>
           <span class="footer-name">Beacon of Hope</span>
           <span class="footer-npo">NPO 307-989</span>
@@ -283,8 +349,7 @@
         <a href="contact.html">Contact</a>
         <a href="donate.html">Donate</a>
       </nav>
-      <p class="footer-copy">&copy; 2026 Beacon of Hope. Registered NPO. All rights reserved. Designed by Aluwani Rambau - <a href="https://www.github.com/aluwani99" target="_blank">aluwani99</a></p>
-      
+      <p class="footer-copy">&copy; 2026 Beacon of Hope. Registered NPO. All rights reserved.</p>
     </div>
   </footer>
 

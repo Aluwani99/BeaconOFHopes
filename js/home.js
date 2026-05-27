@@ -2,57 +2,87 @@
 // BEACON OF HOPE — Home JS
 // ============================================================
 
-// Stat counter animation
+// ---- AUTO-ROTATING HERO BACKGROUND ----
+(function () {
+  const slides = document.querySelectorAll('.hero-bg-img');
+  const dots   = document.querySelectorAll('.hero-dot');
+  if (!slides.length) return;
+
+  let current  = 0;
+  let timer    = null;
+  const DELAY  = 5000; // 5 seconds
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    if (dots[current]) dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    if (dots[current]) dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, DELAY);
+  }
+
+  // Dot clicks
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startTimer(); });
+  });
+
+  // Pause on hover
+  const hero = document.getElementById('hero');
+  if (hero) {
+    hero.addEventListener('mouseenter', () => clearInterval(timer));
+    hero.addEventListener('mouseleave', startTimer);
+  }
+
+  // Swipe support (touch)
+  let touchStartX = 0;
+  if (hero) {
+    hero.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+    hero.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) { goTo(diff > 0 ? current + 1 : current - 1); startTimer(); }
+    }, { passive: true });
+  }
+
+  startTimer();
+})();
+
+// ---- STAT COUNTER ANIMATION ----
 (function () {
   const counters = document.querySelectorAll('.stat-num[data-target]');
   if (!counters.length) return;
 
-  const animateCounter = (el) => {
+  function animateCounter(el) {
     const target = parseInt(el.dataset.target, 10);
-    const duration = 1800;
-    const step = 16;
-    const steps = duration / step;
-    const increment = target / steps;
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
+    const step   = 16;
+    const steps  = 1800 / step;
+    const inc    = target / steps;
+    let current  = 0;
+    const suffix = target >= 100 ? '+' : '';
+    const timer  = setInterval(() => {
+      current += inc;
       if (current >= target) {
-        el.textContent = target + (target >= 100 ? '+' : '');
+        el.textContent = target + suffix;
         clearInterval(timer);
       } else {
-        el.textContent = Math.floor(current) + (target >= 100 ? '+' : '');
+        el.textContent = Math.floor(current) + suffix;
       }
     }, step);
-  };
+  }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach(animateCounter);
+    return;
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); obs.unobserve(e.target); } });
   }, { threshold: 0.5 });
 
-  counters.forEach(c => observer.observe(c));
-})();
-
-// Hero background chooser
-(function () {
-  const btns = document.querySelectorAll('.chooser-btn');
-  const bgs = document.querySelectorAll('.hero-bg-img');
-  if (!btns.length || !bgs.length) return;
-
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const idx = parseInt(btn.dataset.bg, 10);
-
-      // Update backgrounds
-      bgs.forEach((bg, i) => bg.classList.toggle('active', i === idx));
-
-      // Update buttons
-      btns.forEach((b, i) => b.classList.toggle('active', i === idx));
-    });
-  });
+  counters.forEach(c => obs.observe(c));
 })();

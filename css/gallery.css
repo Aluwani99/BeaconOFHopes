@@ -399,3 +399,35 @@
   .achievements-grid { grid-template-columns: 1fr; }
   .achievement-card { flex-direction: column; }
 }
+
+/* ============================================================
+   GALLERY — Mobile fixes
+   ============================================================ */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 190px;
+  }
+  .achievements-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+    gap: 0.75rem;
+  }
+  .gallery-item--wide  { grid-column: span 1; }
+  .gallery-item--tall  { grid-row: span 1; }
+  .gallery-filters { gap: 0.4rem; }
+  .filter-btn { font-size: 0.78rem; padding: 0.45rem 0.9rem; }
+  .lightbox-prev { left: 0.4rem; }
+  .lightbox-next { right: 0.4rem; }
+  .achievement-card { flex-direction: row; flex-wrap: wrap; }
+  .achievement-icon { width: 46px; height: 46px; font-size: 1.5rem; border-radius: 10px; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-auto-rows: 200px; }
+  .gallery-overlay { opacity: 1; }
+}

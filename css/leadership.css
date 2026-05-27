@@ -181,3 +181,15 @@
 
   .leader-contact { justify-content: center; }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .leader-featured { grid-template-columns: 1fr; text-align: center; padding: 2rem 1.25rem; }
+  .leader-contact { justify-content: center; flex-wrap: wrap; }
+  .leader-avatar--large { width: 140px; height: 140px; margin: 0 auto; }
+  .leaders-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .leaders-grid { grid-template-columns: 1fr; }
+  .leader-card { padding: 1.5rem 1.25rem; }
+}

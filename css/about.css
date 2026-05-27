@@ -121,3 +121,14 @@
 @media (max-width: 480px) {
   .about-highlights { grid-template-columns: 1fr; }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-highlights { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .npo-inner { flex-direction: column; gap: 1.25rem; }
+}
+@media (max-width: 480px) {
+  .about-highlights { grid-template-columns: 1fr; }
+  .highlight-card { padding: 1.25rem; }
+}

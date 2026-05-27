@@ -108,3 +108,14 @@
   .vm-grid { grid-template-columns: 1fr; }
   .vm-card { padding: 2rem 1.5rem; }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .vm-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .vm-card { padding: 2rem 1.5rem; }
+  .values-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+}
+@media (max-width: 480px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .value-item { padding: 1.5rem; }
+}
